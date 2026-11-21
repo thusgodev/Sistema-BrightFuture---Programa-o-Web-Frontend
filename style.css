@@ -1,0 +1,655 @@
+/* IMPORTAÇÃO DAS FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+/* VARIÁVEIS DE CORES */
+:root {
+    --azul: #1D4ED8;
+    --azulEscuro: #153DAA;
+    --amarelo: #FACC15;
+    --laranja: #F97316;
+    --laranjaEscuro: #EA580C;
+    --verde: #16A34A;
+    --verdeEscuro: #15803D;
+    --fundo: #EFF6FF;
+    --branco: #FFFFFF;
+    --texto: #1E293B;
+    --cinza: #64748B;
+    --borda: #DCE5F0;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Baloo 2', sans-serif;
+    color: var(--azul);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+/* BARRA DE NAVEGAÇÃO SUPERIOR */
+.cabecalhoPrincipal {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.menuNavegacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.linkMenu {
+    color: var(--branco);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.linkMenu:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.linkMenu.linkAtivo {
+    background-color: var(--branco);
+    color: var(--azul);
+}
+
+.perfilUsuario {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.avatarIniciais,
+.avatarAluno,
+.avatarPerfil {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #DBEAFE;
+    color: var(--azul);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.avatarPerfil {
+    width: 48px;
+    height: 48px;
+    font-size: 15px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudoPrincipal {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 28px 24px;
+}
+
+.tituloPagina {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.subtituloSecao,
+.tituloSecaoPerfil {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+/* BUSCA, FILTROS E BOTÕES */
+.barraBusca {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 280px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    padding: 8px 14px;
+    margin-bottom: 16px;
+}
+
+.campoBusca {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+    color: var(--texto);
+}
+
+.barraControles {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.grupoFiltros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.campoFiltro {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rotuloFiltro,
+.rotuloCampo,
+.rotuloVinculo,
+.rotuloEscopo {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--texto);
+}
+
+.seletorFiltro {
+    padding: 9px 14px;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    background-color: var(--branco);
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--texto);
+    outline: none;
+}
+
+.grupoAcoes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.botaoPrimario,
+.botaoSecundario,
+.botaoAlternarSenha {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.botaoPrimario,
+.botaoEntrar {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.botaoPrimario:hover,
+.botaoEntrar:hover {
+    background-color: var(--laranjaEscuro);
+}
+
+.botaoSecundario,
+.botaoAlternarSenha {
+    background-color: var(--branco);
+    color: var(--azul);
+    border: 1px solid var(--borda);
+}
+
+.botaoSecundario:hover,
+.botaoAlternarSenha:hover {
+    background-color: var(--fundo);
+}
+
+.botaoLargo {
+    flex: 1;
+}
+
+/* CARDS E TABELAS */
+.cardTabela,
+.cardFormulario,
+.cardPerfil,
+.cardIndicador,
+.cardGrafico {
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+.tabelaDados,
+.tabelaPresenca,
+.tabelaNotas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabelaDados th,
+.tabelaPresenca th,
+.tabelaNotas th {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 13px 14px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabelaDados td,
+.tabelaPresenca td,
+.tabelaNotas td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--borda);
+    font-size: 14px;
+}
+
+.tabelaDados tbody tr:hover {
+    background-color: var(--fundo);
+}
+
+.celulaAluno {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linkDetalhes {
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* SELOS E ALERTAS */
+.celulaFrequencia,
+.celulaMedia,
+.badgeStatusPrazo,
+.badgeSituacao,
+.badgeRevisao,
+.badgeVinculo,
+.alertaSituacao,
+.etiquetaInfo,
+.etiquetaTurma {
+    display: inline-block;
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #E0F2FE;
+    color: #0369A1;
+}
+
+.statusRegular,
+.statusAprovado,
+.statusAtivo {
+    background-color: #DCFCE7;
+    color: var(--verdeEscuro);
+}
+
+.statusAtencao,
+.statusPendente {
+    background-color: #FEF9C3;
+    color: #A16207;
+}
+
+/* FORMULÁRIOS E ETAPAS */
+.cardFormulario,
+.cardPerfil {
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.indicadorEtapa {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cinza);
+    margin-bottom: 10px;
+}
+
+.campoFormulario {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.entradaTexto,
+.seletorCampo,
+.entradaData,
+.areaTexto,
+.seletorDdi,
+.entradaNota,
+.seletorVinculo {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--texto);
+    background-color: var(--branco);
+    outline: none;
+}
+
+.entradaTexto:focus,
+.seletorCampo:focus,
+.entradaData:focus,
+.areaTexto:focus,
+.entradaNota:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 5px rgba(29, 78, 216, 0.2);
+}
+
+.seletorDdi {
+    width: auto;
+}
+
+.grupoCampoSenha,
+.grupoTelefone {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.linhaDuasColunas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.secaoListaPresenca,
+.secaoListaNotas,
+.secaoPerfil {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--borda);
+}
+
+.rodapeFormulario {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.etapaOculta {
+    display: none;
+}
+
+.etapaAtiva {
+    display: block;
+}
+
+.campoSomenteLeitura {
+    background-color: var(--fundo);
+}
+
+/* PERFIL */
+.topoPerfil,
+.linhaIndicador,
+.linhaSituacao,
+.linhaSeguranca {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.identidadePerfil {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.listaEtiquetas,
+.listaTurmasVinculadas,
+.linhaIndicadoresAluno {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.listaNotasAluno,
+.listaAtendimentos {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.itemNotaAluno {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+/* TELA DE LOGIN */
+.paginaLogin .containerLogin {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--fundo);
+}
+
+.cardLogin {
+    width: 420px;
+    max-width: 100%;
+    background-color: var(--branco);
+    padding: 32px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cabecalhoLogin {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.marcaLogin {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.logoLogin {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.subtituloLogin,
+.avisoPrivacidadeLogin,
+.textoCadastro,
+.textoAjuda {
+    font-size: 13px;
+    color: var(--cinza);
+}
+
+.mensagemFeedback {
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #DC2626;
+}
+
+.linhaRotuloSenha,
+.linhaOpcoesLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.linkSecundario,
+.linkDestaque {
+    color: var(--azul);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.rotuloCheckbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.botaoEntrar {
+    width: 100%;
+    margin-top: 6px;
+}
+
+.rodapeLogin {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid var(--borda);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+/* PAINEL DA COORDENAÇÃO */
+.gradeIndicadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.cardIndicador {
+    border-left: 5px solid var(--azul);
+}
+
+.valorIndicador {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.destaqueAzul {
+    color: var(--azul);
+}
+
+.destaqueVerde {
+    color: var(--verde);
+}
+
+.destaqueAlerta {
+    color: #B45309;
+}
+
+.gradeGraficos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.containerBarras {
+    height: 170px;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    padding-top: 16px;
+}
+
+.barraItem {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+}
+
+.barraColuna {
+    width: 38px;
+    border-radius: 6px 6px 0 0;
+}
+
+.barraAzul {
+    background-color: var(--azul);
+}
+
+.barraVerde {
+    background-color: var(--verde);
+}
+
+.barraAmarela {
+    background-color: var(--amarelo);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+    .gradeIndicadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalhoPrincipal {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 18px;
+    }
+
+    .conteudoPrincipal {
+        padding: 18px 14px;
+    }
+
+    .linhaDuasColunas,
+    .gradeIndicadores,
+    .gradeGraficos {
+        grid-template-columns: 1fr;
+    }
+
+    .rodapeFormulario {
+        flex-direction: column;
+    }
+}
+
