@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Registrar Aula</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="" defer></script>
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="alunos.html" class="linkMenu">Turmas</a>
+            <a href="aulas.html" class="linkMenu linkAtivo">Registros de aula</a>
+            <a href="avaliacoes.html" class="linkMenu">Avaliações</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Prof. André</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">AN</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina" id="tituloFormAula">REGISTRAR AULA</h1>
+
+        <section class="cardFormulario">
+            <form id="formAula" class="formularioPadrao">
+                <div class="campoFormulario">
+                    <label for="inputTituloAula" class="rotuloCampo">Título da aula</label>
+                    <input type="text" id="inputTituloAula" class="entradaTexto" placeholder="Digite aqui..." required>
+                </div>
+
+                <div class="campoFormulario">
+                    <label for="seletorTurmaFormAula" class="rotuloCampo">Turma</label>
+                    <select id="seletorTurmaFormAula" class="seletorCampo" required>
+                        <option value="8-ano-A">8º ano A</option>
+                        <option value="8-ano-B">8º ano B</option>
+                        <option value="9-ano-A">9º ano A</option>
+                    </select>
+                </div>
+
+                <div class="campoFormulario">
+                    <label for="inputDataAula" class="rotuloCampo">Data</label>
+                    <input type="date" id="inputDataAula" class="entradaData" required>
+                </div>
+
+                <div class="campoFormulario">
+                    <label for="textareaResumoAula" class="rotuloCampo">Resumo da aula</label>
+                    <textarea id="textareaResumoAula" class="areaTexto" rows="4" placeholder="Digite aqui..." required></textarea>
+                </div>
+
+                <div class="secaoListaPresenca">
+                    <h2 class="subtituloSecao">Lista de presença</h2>
+                    <table class="tabelaPresenca" id="tabelaPresenca">
+                        <thead>
+                            <tr>
+                                <th>Aluno</th>
+                                <th>Presente</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpoListaPresenca">
+                            <tr class="linhaPresenca">
+                                <td>
+                                    <div class="celulaAluno">
+                                        <span class="avatarAluno">FO</span>
+                                        <span class="nomeAluno">Fulano</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <label class="controlePresenca">
+                                        <input type="checkbox" class="checkboxPresenca" checked>
+                                        <span class="interruptorPresenca"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="rodapeFormulario">
+                    <a href="aulas.html" class="botaoSecundario" id="btnCancelarAula">Cancelar</a>
+                    <button type="submit" class="botaoPrimario" id="btnSalvarAula">Registrar aula</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

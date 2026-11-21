@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="" defer></script>
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="alunos.html" class="linkMenu linkAtivo">Turmas</a>
+            <a href="aulas.html" class="linkMenu">Registros de aula</a>
+            <a href="avaliacoes.html" class="linkMenu">Avaliações</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Prof. André</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">AN</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina">MINHAS TURMAS</h1>
+
+        <div class="barraBusca">
+            <input type="search" id="inputBusca" class="campoBusca" placeholder="Busca">
+            <span class="iconeBusca">🔍</span>
+        </div>
+
+        <div class="barraControles" id="barraControles">
+            <div class="grupoFiltros">
+                <div class="campoFiltro">
+                    <label for="seletorSerie" class="rotuloFiltro">Série</label> 
+                    <select id="seletorSerie" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="8-ano">8º ano</option>
+                        <option value="9-ano">9º ano</option>
+                    </select>
+                </div>
+
+                <div class="campoFiltro">
+                    <label for="seletorTurma" class="rotuloFiltro">Turma</label> 
+                    <select id="seletorTurma" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="A">Turma A</option>
+                        <option value="B">Turma B</option>
+                    </select>
+                </div>
+
+                <div class="campoFiltro">
+                    <label for="selectSituacao" class="rotuloFiltro">Situação</label> 
+                    <select id="selectSituacao" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Formado">Formado</option>
+                        <option value="Transferido">Transferido</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grupoAcoes">
+                <a href="form-avaliacao.html" class="botaoPrimario" id="btnLancarNotas">Lançar notas</a>
+                <a href="form-aula.html" class="botaoPrimario" id="btnRegistrarAula">Registrar aula</a>
+            </div>
+        </div>
+
+        <section class="cardTabela">
+            <table class="tabelaDados" id="tabelaAlunos">
+                <thead>
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Série</th>
+                        <th>Média Geral</th>
+                        <th>Frequência</th>
+                        <th>Vínculo</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabelaAlunos">
+                    <tr>
+                        <td>
+                            <div class="celulaAluno">
+                                <span class="avatarAluno">FO</span>
+                                <span class="nomeAluno">Fulano</span>
+                            </div>
+                        </td>
+                        <td>8º ano A</td>
+                        <td>7,5</td>
+                        <td><span class="celulaFrequencia statusRegular">90%</span></td>
+                        <td>Ativo</td>
+                        <td><a href="perfil-aluno.html" class="linkDetalhes"> <img src="../assets/pencil-square.svg"> </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

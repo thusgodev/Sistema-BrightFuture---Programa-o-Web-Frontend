@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Perfil do Aluno (Secretaria)</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="alunos.html" class="linkMenu linkAtivo">Alunos</a>
+            <a href="matricula.html" class="linkMenu">Nova matrícula</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Dona Helena</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">HE</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina">Perfil do aluno</h1>
+
+        <section class="cardPerfil" id="cardPerfilSecretaria">
+            <div class="topoPerfil">
+                <div class="identidadePerfil">
+                    <span class="avatarPerfil" id="avatarAlunoSecretaria">FO</span>
+                    <div class="infoBasicaPerfil">
+                        <h2 class="nomePerfil" id="nomeAlunoSecretaria">Fulano</h2>
+                        <div class="listaEtiquetas">
+                            <span class="etiquetaInfo" id="matriculaAlunoSecretaria">Matrícula: 103123</span>
+                            <span class="etiquetaInfo" id="turmaAlunoSecretaria">Turma: 8º ano A</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controleVinculo">
+                    <label for="seletorVinculoAluno" class="rotuloVinculo">Vínculo</label>
+                    <select id="seletorVinculoAluno" class="seletorVinculo">
+                        <option value="Ativo">Ativo</option>
+                        <option value="Formado">Formado</option>
+                        <option value="Transferido">Transferido</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="campoFormulario">
+                <label for="inputCpfPerfil" class="rotuloCampo">CPF</label>
+                <input type="text" id="inputCpfPerfil" class="entradaTexto" value="000.000.000-00" readonly>
+            </div>
+
+            <div class="campoFormulario">
+                <label for="inputNascimentoPerfil" class="rotuloCampo">Data de nascimento</label>
+                <input type="text" id="inputNascimentoPerfil" class="entradaTexto" value="21/11/2012" readonly>
+            </div>
+
+            <div class="linhaDuasColunas">
+                <div class="campoFormulario">
+                    <label for="seletorSexoPerfil" class="rotuloCampo">Sexo</label>
+                    <select id="seletorSexoPerfil" class="seletorCampo" disabled>
+                        <option value="Masculino" selected>Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                </div>
+
+                <div class="campoFormulario">
+                    <label for="seletorNacionalidadePerfil" class="rotuloCampo">Nacionalidade</label>
+                    <select id="seletorNacionalidadePerfil" class="seletorCampo" disabled>
+                        <option value="Brasil" selected>Brasil</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="linhaDuasColunas">
+                <div class="campoFormulario">
+                    <label for="inputNomePaiPerfil" class="rotuloCampo">Nome do pai</label>
+                    <input type="text" id="inputNomePaiPerfil" class="entradaTexto" value="Sicrano" readonly>
+                </div>
+
+                <div class="campoFormulario">
+                    <label for="inputContatoPaiPerfil" class="rotuloCampo">Contato</label>
+                    <input type="text" id="inputContatoPaiPerfil" class="entradaTexto" value="+55 (79) 99999-9999" readonly>
+                </div>
+            </div>
+
+            <div class="linhaDuasColunas">
+                <div class="campoFormulario">
+                    <label for="inputNomeMaePerfil" class="rotuloCampo">Nome da mãe</label>
+                    <input type="text" id="inputNomeMaePerfil" class="entradaTexto" value="Maria" readonly>
+                </div>
+
+                <div class="campoFormulario">
+                    <label for="inputContatoMaePerfil" class="rotuloCampo">Contato</label>
+                    <input type="text" id="inputContatoMaePerfil" class="entradaTexto" value="A preencher" readonly>
+                </div>
+            </div>
+
+            <div class="campoFormulario">
+                <label for="inputEnderecoPerfil" class="rotuloCampo">Endereço completo</label>
+                <input type="text" id="inputEnderecoPerfil" class="entradaTexto" value="Rua Tal, 257, Bairro tal, Aracaju - SE" readonly>
+            </div>
+
+            <div class="rodapeAtualizacao">
+                <span class="avisoAtualizacao" id="avisoUltimaAtualizacao">⚠ Última atualização: 10/05/2026</span>
+            </div>
+
+            <div class="rodapeFormulario">
+                <a href="alunos.html" class="botaoSecundario" id="btnVoltarPerfilSecretaria">Voltar</a>
+                <button type="button" class="botaoSecundario botaoLargo" id="btnEditarDadosAluno">Editar dados</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
