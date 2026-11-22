@@ -10,6 +10,8 @@
     --laranjaEscuro: #EA580C;
     --verde: #16A34A;
     --verdeEscuro: #15803D;
+    --vermelho: #DA2B2B;
+    --vermelhoEscuro: #801515;
     --fundo: #EFF6FF;
     --branco: #FFFFFF;
     --texto: #1E293B;
@@ -63,6 +65,7 @@ button {
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .linkMenu {
@@ -188,7 +191,7 @@ button {
 .seletorFiltro {
     padding: 9px 14px;
     border: 1px solid var(--borda);
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: var(--branco);
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
@@ -204,7 +207,8 @@ button {
 
 .botaoPrimario,
 .botaoSecundario,
-.botaoAlternarSenha {
+.botaoAlternarSenha,
+.botaoTerciario {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -221,9 +225,18 @@ button {
     color: var(--branco);
 }
 
+.botaoTerciario {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
 .botaoPrimario:hover,
 .botaoEntrar:hover {
     background-color: var(--laranjaEscuro);
+}
+
+.botaoTerciario:hover {
+    background-color: var(--vermelhoEscuro);
 }
 
 .botaoSecundario,
@@ -316,6 +329,10 @@ button {
     color: #0369A1;
 }
 
+.badgeRevisao {
+    margin-top: 18px;
+}
+
 .statusRegular,
 .statusAprovado,
 .statusAtivo {
@@ -367,6 +384,10 @@ button {
     color: var(--texto);
     background-color: var(--branco);
     outline: none;
+}
+
+.entradaNota {
+    width: 50%;
 }
 
 .entradaTexto:focus,
@@ -449,8 +470,11 @@ button {
     margin-top: 6px;
 }
 
-.listaNotasAluno,
-.listaAtendimentos {
+.linhaIndicadoresAluno {
+    margin-bottom: 18px;
+}
+
+.listaNotasAluno {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -653,3 +677,95 @@ button {
     }
 }
 
+/* LISTA DE DOCUMENTOS NA ETAPA 4 DA MATRÍCULA */
+.listaDocumentosMatricula {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.itemDocumentoUpload {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.infoDocumentoUpload {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nomeDocumentoUpload {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--texto);
+}
+
+.acoesDocumentoUpload {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.botaoAnexarArquivo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border: 1.5px dashed var(--azul);
+    border-radius: 8px;
+    background-color: var(--fundo);
+    color: var(--azul);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.botaoAnexarArquivo:hover {
+    background-color: #DBEAFE;
+}
+
+.grupoArquivoAnexado {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.botaoCompacto {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.avisoPendenciaMatricula {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background-color: #FEF9C3;
+}
+
+.avisoPendenciaMatricula .textoAjuda {
+    color: #A16207;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .itemDocumentoUpload {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .acoesDocumentoUpload {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
