@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Alunos (Secretaria)</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="alunos.html" class="linkMenu linkAtivo">Alunos</a>
+            <a href="matricula.html" class="linkMenu">Nova matrícula</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Dona Helena</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">HE</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina">ALUNOS</h1>
+
+        <div class="barraBusca">
+            <input type="search" id="inputBuscaAluno" class="campoBusca" placeholder="Busca">
+            <span class="iconeBusca">🔍︎</span>
+        </div>
+
+        <div class="barraControles" id="barraControlesSecretaria">
+            <div class="grupoFiltros">
+                <div class="campoFiltro">
+                    <label for="seletorSerieSecretaria" class="rotuloFiltro">Série</label>
+                    <select id="seletorSerieSecretaria" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="8-ano">8º ano</option>
+                        <option value="9-ano">9º ano</option>
+                    </select>
+                </div>
+
+                <div class="campoFiltro">
+                    <label for="seletorTurmaSecretaria" class="rotuloFiltro">Turma</label>
+                    <select id="seletorTurmaSecretaria" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="A">Turma A</option>
+                        <option value="B">Turma B</option>
+                    </select>
+                </div>
+
+                <div class="campoFiltro">
+                    <label for="seletorSituacaoSecretaria" class="rotuloFiltro">Situação</label>
+                    <select id="seletorSituacaoSecretaria" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Documentacao pendente">Documentação pendente</option>
+                        <option value="Formado">Formado</option>
+                        <option value="Transferido">Transferido</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grupoAcoes">
+                <a href="matricula.html" class="botaoPrimario" id="btnAdicionarMatricula">Adicionar matrícula</a>
+            </div>
+        </div>
+
+        <section class="cardTabela">
+            <table class="tabelaDados" id="tabelaAlunosSecretaria">
+                <thead>
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Série</th>
+                        <th>Matrícula</th>
+                        <th>Situação</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabelaSecretaria">
+                    <tr>
+                        <td>
+                            <div class="celulaAluno">
+                                <span class="avatarAluno">FO</span>
+                                <span class="nomeAluno">Fulano</span>
+                            </div>
+                        </td>
+                        <td>8º ano A</td>
+                        <td>9132</td>
+                        <td><span class="alertaSituacao statusPendente" id="situacaoAlunoExemplo">⚠ Documentação pendente</span></td>
+                        <td><a href="perfil-aluno.html?matricula=9132" class="linkDetalhes">↗</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

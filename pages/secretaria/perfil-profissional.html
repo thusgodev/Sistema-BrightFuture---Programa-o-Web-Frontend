@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Perfil do Profissional</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="" defer></script>
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="alunos.html" class="linkMenu">Turmas</a>
+            <a href="aulas.html" class="linkMenu">Registros de aula</a>
+            <a href="avaliacoes.html" class="linkMenu">Avaliações</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario linkAtivo" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Helena</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">HE</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina">Perfil do profissional</h1>
+
+        <section class="cardPerfil" id="cardPerfilProfissional">
+            <div class="topoPerfil">
+                <div class="identidadePerfil">
+                    <span class="avatarPerfil" id="avatarProfissional">HE</span>
+                    <div class="infoBasicaPerfil">
+                        <h2 class="nomePerfil" id="nomeProfissional">Helena</h2>
+                        <div class="listaEtiquetas">
+                            <span class="etiquetaInfo" id="registroProfissional">Registro: SEC-033</span>
+                            <span class="etiquetaInfo" id="cargoProfissional">Perfil: Secretária</span>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="badgeVinculo statusAtivo" id="vinculoProfissional">Vínculo: Ativo</span>
+            </div>
+
+            <div class="secaoPerfil" id="secaoDadosInstitucionais">
+                <h3 class="tituloSecaoPerfil">Dados Institucionais</h3>
+                <p class="dadoLinha" id="emailProfissional">E-mail: helena.sec@brightfuture.com.br</p>
+                <p class="dadoLinha" id="ramalProfissional">Ramal: (41) 3333-4455 • Ramal 204</p>
+            </div>
+
+            <div class="secaoPerfil" id="secaoAtribuicoes">
+                <h3 class="tituloSecaoPerfil">Atribuições</h3>
+                <p class="dadoLinha" id="disciplinaProfissional">Ensino Médio</p>
+                <p class="dadoLinha" id="disciplinaProfissional">Fundamental I</p>
+                <p class="dadoLinha" id="disciplinaProfissional">Fundamental II</p>
+            </div>
+
+            <div class="secaoPerfil" id="secaoSeguranca">
+                <h3 class="tituloSecaoPerfil">Segurança e LGPD</h3>
+                <div class="linhaSeguranca">
+                    <span class="nivelAcessoTexto" id="nivelAcessoTexto">Nível de acesso: Restrito às turmas vinculadas</span>
+                    <button type="button" class="botaoSecundario" id="btnAlterarSenha">Alterar senha</button>
+                </div>
+            </div>
+
+            <div class="rodapeFormulario">
+                <a href="alunos.html" class="botaoSecundario" id="btnVoltarProfissional">Voltar</a>
+                <a href="../../index.html" class="botaoPrimario" id="btnSairConta">Sair da conta</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
