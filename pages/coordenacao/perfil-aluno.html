@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Perfil do Aluno (Coordenação)</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="painel.html" class="linkMenu">Painel</a>
+            <a href="alunos.html" class="linkMenu linkAtivo">Alunos</a>
+            <a href="diarios.html" class="linkMenu">Diários</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Juliana</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">JU</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina">Perfil do aluno</h1>
+
+        <section class="cardPerfil" id="cardPerfilCoordenacao">
+            <div class="topoPerfil">
+                <div class="identidadePerfil">
+                    <span class="avatarPerfil" id="avatarAlunoCoordenacao">FO</span>
+                    <div class="infoBasicaPerfil">
+                        <h2 class="nomePerfil" id="nomeAlunoCoordenacao">Fulano</h2>
+                        <div class="listaEtiquetas">
+                            <span class="etiquetaInfo" id="matriculaAlunoCoordenacao">Matrícula: 103123</span>
+                            <span class="etiquetaInfo" id="turmaAlunoCoordenacao">Turma: 8º ano A</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controleVinculo">
+                    <label for="seletorVinculoCoordenacao" class="rotuloVinculo">Vínculo</label>
+                    <select id="seletorVinculoCoordenacao" class="seletorVinculo">
+                        <option value="Ativo">Ativo</option>
+                        <option value="Formado">Formado</option>
+                        <option value="Transferido">Transferido</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="secaoPerfil" id="secaoContatosResponsaveis">
+                <h3 class="tituloSecaoPerfil">Contatos dos Responsáveis</h3>
+                <div class="linhaContato">
+                    <p class="dadoLinha" id="contatoPaiCoordenacao">Pai: Sicrano • (41) 99999-9999</p>
+                    <p class="dadoLinha" id="contatoMaeCoordenacao">Mãe: Maria • (41) 98888-7777</p>
+                </div>
+                <span class="badgeRevisao statusRegular" id="seloRevisaoAnual">Revisado em 2026</span>
+            </div>
+
+            <div class="secaoPerfil" id="secaoDesempenhoFrequencia">
+                <h3 class="tituloSecaoPerfil">Desempenho e Frequência</h3>
+                <div class="linhaIndicadoresAluno">
+                    <span class="alertaSituacao statusAtencao" id="badgeMediaGeralAluno">Média Geral: 5,4</span>
+                    <span class="alertaSituacao statusAtencao" id="badgeFrequenciaAluno">Frequência: 72% (14 faltas)</span>
+                </div>
+
+                <table class="tabelaDados">
+                    <tr>
+                        <th></th>
+                        <th>Português</th>
+                        <th>Matemática</th>
+                        <th>Ciências</th>
+                        <th>Geografia</th>
+                        <th>História</th>
+                    </tr>
+                    <tr>
+                        <td>Prova Bimestral I</td>
+                        <td>4,5</td>
+                        <td>7,6</td>
+                        <td>8,0</td>
+                        <td>7,8</td>
+                        <td>9,0</td>
+                    </tr>
+                    <tr>
+                        <td>Média</td>
+                        <td>4,5</td>
+                        <td>7,6</td>
+                        <td>8,0</td>
+                        <td>7,8</td>
+                        <td>9,0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="rodapeFormulario">
+                <a href="alunos.html" class="botaoSecundario" id="btnVoltarPerfilCoordenacao">Voltar</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

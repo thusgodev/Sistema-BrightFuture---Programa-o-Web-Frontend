@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Entrar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="paginaLogin">
+    <main class="containerLogin">
+        <section class="cardLogin">
+            <header class="cabecalhoLogin">
+                <div class="marcaLogin">
+                    <img src="../../assets/logo-5-brightfuture.png" alt="Logomarca BrightFuture" class="logoLogin" id="logoBrightFuture">
+                    
+                </div>
+                <p class="subtituloLogin">Acesse sua conta institucional</p>
+            </header>
+
+            <div class="mensagemFeedback" id="mensagemFeedbackLogin" role="alert" aria-live="polite"></div>
+
+            <form id="formLogin" class="formularioLogin" novalidate>
+                <div class="campoFormulario">
+                    <label for="inputIdentificacao" class="rotuloCampo">E-mail ou usuário</label>
+                    <input
+                        type="text"
+                        id="inputIdentificacao"
+                        name="identificacao"
+                        class="entradaTexto"
+                        placeholder="Digite seu e-mail ou usuário"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="campoFormulario">
+                    <div class="linhaRotuloSenha">
+                        <label for="inputSenha" class="rotuloCampo">Senha</label>
+                        <a href="#recuperar-senha" class="linkSecundario" id="linkRecuperarSenha">Esqueci minha senha</a>
+                    </div>
+
+                    <div class="grupoCampoSenha">
+                        <input
+                            type="password"
+                            id="inputSenha"
+                            name="senha"
+                            class="entradaTexto entradaSenha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="botaoAlternarSenha"
+                            id="btnAlternarSenha"
+                            aria-label="Mostrar ou ocultar senha"
+                            aria-pressed="false"
+                        >
+                            Mostrar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="linhaOpcoesLogin">
+                    <label for="checkboxLembrarAcesso" class="rotuloCheckbox">
+                        <input type="checkbox" id="checkboxLembrarAcesso" class="entradaCheckbox">
+                        <span class="textoCheckbox">Lembrar meu acesso</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="botaoPrimario botaoEntrar" id="btnEntrar">Entrar</button>
+            </form>
+
+            <footer class="rodapeLogin">
+                <p class="textoCadastro">
+                    Ainda não tem acesso?
+                    <a href="#criar-conta" class="linkDestaque" id="linkCriarConta">Criar conta</a>
+                </p>
+                <p class="avisoPrivacidadeLogin">
+                    Uso restrito à equipe escolar conforme as diretrizes de privacidade e proteção de dados (LGPD).
+                </p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

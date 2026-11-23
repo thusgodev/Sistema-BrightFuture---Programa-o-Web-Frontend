@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Nova Matrícula</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="alunos.html" class="linkMenu">Alunos</a>
+            <a href="matricula.html" class="linkMenu linkAtivo">Nova matrícula</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Dona Helena</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">HE</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina">NOVA MATRÍCULA</h1>
+
+        <section class="cardFormulario">
+            <p class="indicadorEtapa" id="indicadorEtapaMatricula">Etapa 1 de 4</p>
+
+            <form id="formNovaMatricula" class="formularioPadrao">
+                
+                <div class="etapaFormulario etapaAtiva" id="etapaDadosAluno">
+                    <h2 class="subtituloSecao">DADOS DO ALUNO</h2>
+
+                    <div class="campoFormulario">
+                        <label for="inputNomeAluno" class="rotuloCampo">Nome do aluno</label>
+                        <input type="text" id="inputNomeAluno" class="entradaTexto" placeholder="Digite aqui..." required>
+                    </div>
+
+                    <div class="campoFormulario">
+                        <label for="seletorTurmaMatricula" class="rotuloCampo">Turma</label>
+                        <select id="seletorTurmaMatricula" class="seletorCampo" required>
+                            <option value="8-ano-A">8º ano A</option>
+                            <option value="8-ano-B">8º ano B</option>
+                            <option value="9-ano-A">9º ano A</option>
+                        </select>
+                    </div>
+
+                    <div class="campoFormulario">
+                        <label for="inputCpfAluno" class="rotuloCampo">CPF</label>
+                        <input type="text" id="inputCpfAluno" class="entradaTexto" placeholder="000.000.000-00" required>
+                    </div>
+
+                    <div class="campoFormulario">
+                        <label for="inputDataNascimentoAluno" class="rotuloCampo">Data de nascimento</label>
+                        <input type="date" id="inputDataNascimentoAluno" class="entradaData" required>
+                    </div>
+
+                    <div class="linhaDuasColunas">
+                        <div class="campoFormulario">
+                            <label for="seletorSexoAluno" class="rotuloCampo">Sexo</label>
+                            <select id="seletorSexoAluno" class="seletorCampo">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="campoFormulario">
+                            <label for="seletorNacionalidadeAluno" class="rotuloCampo">Nacionalidade</label>
+                            <select id="seletorNacionalidadeAluno" class="seletorCampo">
+                                <option value="Brasil">Brasil</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="linhaDuasColunas">
+                        <div class="campoFormulario">
+                            <label for="inputNomePai" class="rotuloCampo">Nome do pai</label>
+                            <input type="text" id="inputNomePai" class="entradaTexto" placeholder="Digite aqui...">
+                        </div>
+
+                        <div class="campoFormulario">
+                            <label for="inputNomeMae" class="rotuloCampo">Nome da mãe</label>
+                            <input type="text" id="inputNomeMae" class="entradaTexto" placeholder="Digite aqui...">
+                        </div>
+                    </div>
+
+                    <div class="rodapeFormulario">
+                        <a href="alunos.html" class="botaoSecundario" id="btnCancelarMatricula">Cancelar</a>
+                        <button type="button" class="botaoPrimario" id="btnProximoEtapa1">Próximo</button>
+                    </div>
+                </div>
+
+                <div class="etapaFormulario etapaOculta" id="etapaEnderecoAluno">
+                    <h2 class="subtituloSecao">ENDEREÇO</h2>
+
+                    <div class="linhaDuasColunas">
+                        <div class="campoFormulario">
+                            <label for="inputCepAluno" class="rotuloCampo">CEP</label>
+                            <input type="text" id="inputCepAluno" class="entradaTexto" placeholder="00000000" required>
+                        </div>
+
+                        <div class="campoFormulario">
+                            <label for="inputLogradouroAluno" class="rotuloCampo">Logradouro</label>
+                            <input type="text" id="inputLogradouroAluno" class="entradaTexto" placeholder="Digite aqui..." required>
+                        </div>
+                    </div>
+
+                    <div class="linhaDuasColunas">
+                        <div class="campoFormulario">
+                            <label for="inputBairroAluno" class="rotuloCampo">Bairro</label>
+                            <input type="text" id="inputBairroAluno" class="entradaTexto" placeholder="Digite aqui..." required>
+                        </div>
+
+                        <div class="campoFormulario">
+                            <label for="inputNumeroEnderecoAluno" class="rotuloCampo">Número</label>
+                            <input type="text" id="inputNumeroEnderecoAluno" class="entradaTexto" placeholder="00000" required>
+                        </div>
+                    </div>
+
+                    <div class="linhaDuasColunas">
+                        <div class="campoFormulario">
+                            <label for="seletorEstadoAluno" class="rotuloCampo">Estado</label>
+                            <select id="seletorEstadoAluno" class="seletorCampo">
+                                <option value="SE">Sergipe</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PR">Paraná</option>
+                            </select>
+                        </div>
+
+                        <div class="campoFormulario">
+                            <label for="seletorCidadeAluno" class="rotuloCampo">Cidade</label>
+                            <select id="seletorCidadeAluno" class="seletorCampo">
+                                <option value="Aracaju">Aracaju</option>
+                                <option value="Uberaba">Uberaba</option>
+                                <option value="Curitiba">Curitiba</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="campoFormulario">
+                        <label for="inputComplementoAluno" class="rotuloCampo">Complemento</label>
+                        <input type="text" id="inputComplementoAluno" class="entradaTexto" placeholder="Digite aqui...">
+                    </div>
+
+                    <div class="rodapeFormulario">
+                        <button type="button" class="botaoSecundario" id="btnVoltarEtapa2">Voltar</button>
+                        <button type="button" class="botaoPrimario" id="btnProximoEtapa2">Próximo</button>
+                    </div>
+                </div>
+
+                <div class="etapaFormulario etapaOculta" id="etapaDadosResponsavel">
+                    <h2 class="subtituloSecao">DADOS DO RESPONSÁVEL</h2>
+
+                    <div class="campoFormulario">
+                        <label for="inputNomeResponsavel" class="rotuloCampo">Nome do responsável</label>
+                        <input type="text" id="inputNomeResponsavel" class="entradaTexto" placeholder="Digite aqui..." required>
+                    </div>
+
+                    <div class="campoFormulario">
+                        <label for="seletorParentescoResponsavel" class="rotuloCampo">Parentesco</label>
+                        <select id="seletorParentescoResponsavel" class="seletorCampo">
+                            <option value="Pai">Pai</option>
+                            <option value="Mãe">Mãe</option>
+                            <option value="Responsável legal">Responsável legal</option>
+                        </select>
+                    </div>
+
+                    <div class="campoFormulario">
+                        <label for="inputCpfResponsavel" class="rotuloCampo">CPF</label>
+                        <input type="text" id="inputCpfResponsavel" class="entradaTexto" placeholder="000.000.000-00" required>
+                    </div>
+
+                    <div class="campoFormulario">
+                        <label for="inputTelefoneResponsavel" class="rotuloCampo">Número para contato</label>
+                        <div class="grupoTelefone">
+                            <select id="seletorDdiResponsavel" class="seletorDdi">
+                                <option value="+55">+55</option>
+                            </select>
+                            <input type="tel" id="inputTelefoneResponsavel" class="entradaTexto entradaTelefone" placeholder="(00)00000-0000" required>
+                        </div>
+                    </div>
+
+                    <div class="campoFormulario">
+                        <label for="inputEmailResponsavel" class="rotuloCampo">E-mail</label>
+                        <input type="email" id="inputEmailResponsavel" class="entradaTexto" placeholder="exemplo@gmail.com">
+                    </div>
+
+                    <div class="rodapeFormulario">
+                        <button type="button" class="botaoSecundario" id="btnVoltarEtapa3">Voltar</button>
+                        <button type="button" class="botaoPrimario" id="btnProximoEtapa3">Próximo</button>
+                    </div>
+                </div>
+
+                <div class="etapaFormulario etapaOculta" id="etapaDocumentacaoMatricula">
+                    <h2 class="subtituloSecao">DOCUMENTAÇÃO</h2>
+
+                    <div class="campoFormulario">
+                        <label for="inputArquivoContrato" class="rotuloCampo">Contrato / Documentos (opcional)</label>
+                        <input type="file" id="inputArquivoContrato" class="entradaArquivo" accept=".pdf,.jpg,.jpeg,.png">
+                        <span class="textoAjuda" id="nomeArquivoSelecionado">Nenhum arquivo anexado (ficará como documentação pendente)</span>
+                    </div>
+
+                    <div class="rodapeFormulario">
+                        <button type="button" class="botaoSecundario" id="btnVoltarEtapa4">Voltar</button>
+                        <button type="submit" class="botaoPrimario" id="btnConcluirMatricula">Concluir matrícula</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

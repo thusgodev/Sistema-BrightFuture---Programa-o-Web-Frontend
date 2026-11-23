@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Avaliações</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="" defer></script>
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="alunos.html" class="linkMenu">Turmas</a>
+            <a href="aulas.html" class="linkMenu">Registros de aula</a>
+            <a href="avaliacoes.html" class="linkMenu linkAtivo">Avaliações</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Prof. André</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">AN</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina">AVALIAÇÕES</h1>
+
+        <div class="barraBusca">
+            <input type="search" id="inputBuscaAvaliacao" class="campoBusca" placeholder="Busca">
+            <span class="iconeBusca">🔍︎</span>
+        </div>
+
+        <div class="barraControles" id="barraControlesAvaliacoes">
+            <div class="grupoFiltros">
+                <div class="campoFiltro">
+                    <label for="seletorSerieAvaliacao" class="rotuloFiltro">Série</label>
+                    <select id="seletorSerieAvaliacao" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="8-ano">8º ano</option>
+                        <option value="9-ano">9º ano</option>
+                    </select>
+                </div>
+
+                <div class="campoFiltro">
+                    <label for="seletorTurmaAvaliacao" class="rotuloFiltro">Turma</label>
+                    <select id="seletorTurmaAvaliacao" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="A">Turma A</option>
+                        <option value="B">Turma B</option>
+                    </select>
+                </div>
+
+                <div class="campoFiltro">
+                    <label for="seletorPeriodoAvaliacao" class="rotuloFiltro">Período</label>
+                    <select id="seletorPeriodoAvaliacao" class="seletorFiltro">
+                        <option value="">Todos</option>
+                        <option value="1-bimestre">1º Bimestre</option>
+                        <option value="2-bimestre">2º Bimestre</option>
+                        <option value="3-bimestre">3º Bimestre</option>
+                        <option value="4-bimestre">4º Bimestre</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grupoAcoes">
+                <a href="form-avaliacao.html" class="botaoPrimario" id="btnNovaAvaliacao">Lançar notas</a>
+            </div>
+        </div>
+
+        <section class="cardTabela">
+            <table class="tabelaDados" id="tabelaAvaliacoes">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Série</th>
+                        <th>Matéria</th>
+                        <th>Média da turma</th>
+                        <th>Data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabelaAvaliacoes">
+                    <tr>
+                        <td><span class="tituloAvaliacao">Prova Bimestral I</span></td>
+                        <td>8º ano A</td>
+                        <td>Matemática</td>
+                        <td><span class="celulaMedia statusRegular">8,0</span></td>
+                        <td>21/11/2026</td>
+                        <td><a href="form-avaliacao.html?id=1" class="linkDetalhes">↗</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

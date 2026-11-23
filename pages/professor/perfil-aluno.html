@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Perfil do Aluno</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="" defer></script>
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="alunos.html" class="linkMenu linkAtivo">Turmas</a>
+            <a href="aulas.html" class="linkMenu">Registros de aula</a>
+            <a href="avaliacoes.html" class="linkMenu">Avaliações</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Prof. André</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">AN</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina">Perfil do aluno</h1>
+
+        <section class="cardPerfil" id="cardPerfilAluno">
+            <div class="topoPerfil">
+                <div class="identidadePerfil">
+                    <span class="avatarPerfil" id="avatarAlunoPerfil">FO</span>
+                    <div class="infoBasicaPerfil">
+                        <h2 class="nomePerfil" id="nomeAlunoPerfil">Fulano</h2>
+                        <div class="listaEtiquetas">
+                            <span class="etiquetaInfo" id="matriculaAluno">Matrícula: 103123</span>
+                            <span class="etiquetaInfo" id="turmaAluno">Turma: 8º ano A</span>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="badgeVinculo" id="vinculoAluno">Vínculo: Ativo</span>
+            </div>
+
+            <div class="secaoPerfil" id="secaoFrequencia">
+                <h3 class="tituloSecaoPerfil">Frequência</h3>
+                <div class="linhaIndicador">
+                    <span class="textoFaltas" id="totalFaltas">Total de faltas: 2</span>
+                    <span class="celulaFrequencia statusRegular" id="percentualFrequencia">90%</span>
+                </div>
+            </div>
+
+            <div class="secaoPerfil" id="secaoNotas">
+                <h3 class="tituloSecaoPerfil">Notas</h3>
+                <ul class="listaNotasAluno" id="listaNotasAluno">
+                    <li class="itemNotaAluno">
+                        <span class="nomeAvaliacao">Prova Bimestral</span>
+                        <span class="valorNota">0,0</span>
+                        <span class="editar">✎</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="secaoPerfil" id="secaoSituacao">
+                <h3 class="tituloSecaoPerfil">Situação</h3>
+                <div class="linhaSituacao">
+                    <span class="mediaGeralTexto" id="mediaGeralAluno">Média Geral: 10,00</span>
+                    <span class="badgeSituacao statusAprovado" id="statusAprovacao">Aprovado</span>
+                </div>
+            </div>
+
+            <div class="rodapePerfil">
+                <a href="alunos.html" class="botaoSecundario botaoLargo" id="btnFecharPerfil">Fechar</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightFuture — Acompanhamento de Diários</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+        <nav class="menuNavegacao">
+            <a href="painel.html" class="linkMenu">Painel</a>
+            <a href="alunos.html" class="linkMenu">Alunos</a>
+            <a href="diarios.html" class="linkMenu linkAtivo">Diários</a>
+        </nav>
+
+        <a href="perfil-profissional.html" class="perfilUsuario" id="linkPerfilUsuario">
+            <span id="nomeUsuario">Juliana</span>
+            <span class="avatarIniciais" id="iniciaisUsuario">JU</span>
+        </a>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <h1 class="tituloPagina">ACOMPANHAMENTO DE DIÁRIOS</h1>
+
+        <div class="barraBusca">
+            <input type="search" id="inputBuscaDiario" class="campoBusca" placeholder="Busca">
+            <span class="iconeBusca">🔍︎</span>
+        </div>
+
+        <div class="barraControles" id="barraControlesDiarios">
+            <div class="grupoFiltros">
+                <div class="campoFiltro">
+                    <label for="seletorSegmentoDiario" class="rotuloFiltro">Segmento</label>
+                    <select id="seletorSegmentoDiario" class="seletorFiltro">
+                        <option value="">Todos</option>
+                        <option value="Fundamental" selected>Fundamental</option>
+                        <option value="Medio">Médio</option>
+                    </select>
+                </div>
+
+                <div class="campoFiltro">
+                    <label for="seletorSerieDiario" class="rotuloFiltro">Série</label>
+                    <select id="seletorSerieDiario" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="8-ano">8º ano</option>
+                        <option value="9-ano">9º ano</option>
+                    </select>
+                </div>
+
+                <div class="campoFiltro">
+                    <label for="seletorTurmaDiario" class="rotuloFiltro">Turma</label>
+                    <select id="seletorTurmaDiario" class="seletorFiltro">
+                        <option value="">Todas</option>
+                        <option value="A">Turma A</option>
+                        <option value="B">Turma B</option>
+                    </select>
+                </div>
+
+                <div class="campoFiltro">
+                    <label for="seletorPrazoDiario" class="rotuloFiltro">Prazo (48h)</label>
+                    <select id="seletorPrazoDiario" class="seletorFiltro">
+                        <option value="">Todos</option>
+                        <option value="No prazo">No prazo</option>
+                        <option value="Atrasado">Atrasado (+48h)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <section class="cardTabela">
+            <table class="tabelaDados" id="tabelaDiarios">
+                <thead>
+                    <tr>
+                        <th>Professor</th>
+                        <th>Matéria</th>
+                        <th>Série</th>
+                        <th>Último Lançamento</th>
+                        <th>Status (Meta 48h)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabelaDiarios">
+                    <tr>
+                        <td>
+                            <div class="celulaAluno">
+                                <span class="avatarAluno">AN</span>
+                                <span class="nomeAluno">Prof. André</span>
+                            </div>
+                        </td>
+                        <td>Matemática</td>
+                        <td>8º ano A</td>
+                        <td>21/11/2026</td>
+                        <td><span class="badgeStatusPrazo statusRegular">No prazo</span></td>
+                        <td><a href="#" class="linkDetalhes">↗</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="celulaAluno">
+                                <span class="avatarAluno">MA</span>
+                                <span class="nomeAluno">Prof. Marcos</span>
+                            </div>
+                        </td>
+                        <td>História</td>
+                        <td>9º ano A</td>
+                        <td>--/--/----</td>
+                        <td><span class="alertaSituacao statusAtencao">⚠ Atrasado (+48h)</span></td>
+                        <td><a href="#" class="linkDetalhes">↗</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
